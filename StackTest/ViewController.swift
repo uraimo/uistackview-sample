@@ -34,14 +34,11 @@ class ViewController: UIViewController {
         var lbl = UILabel()
         lbl.text="Label 1"
         lbl.backgroundColor = UIColor.redColor()
-        lbl.setContentHuggingPriority(1000, forAxis: UILayoutConstraintAxis.Vertical)
-        
         stackView.addArrangedSubview(lbl)
         
         lbl = UILabel()
         lbl.text="Label 2"
         lbl.backgroundColor = UIColor.greenColor()
-        lbl.setContentHuggingPriority(900, forAxis: UILayoutConstraintAxis.Vertical)
         stackView.addArrangedSubview(lbl)
         
         nestedStackView.axis = .Horizontal
@@ -54,7 +51,6 @@ class ViewController: UIViewController {
         stackView.addArrangedSubview(nestedStackView)
         
         let btn=UIButton(type: .System)
-        btn.setContentHuggingPriority(1000, forAxis: UILayoutConstraintAxis.Vertical)
         btn.setTitle("Press Me", forState: .Normal)
         btn.addTarget(self, action: "pressedme:", forControlEvents: UIControlEvents.TouchUpInside)
         stackView.addArrangedSubview(btn)
